@@ -4,5 +4,13 @@
 <p>Autopost is a private, self-hosted publishing tool used by a single content creator, Daniil Lubovskij, to schedule and publish his own videos to his own YouTube channel and TikTok account.</p>
 <p>The tool runs only on the creator's personal computer. It uploads videos that the creator has made himself, at the time he chooses, through the official YouTube Data API and TikTok Content Posting API.</p>
 <p>It is not offered to the public, has no other users and does not collect data from anyone.</p>
+<h2>YouTube API Services</h2>
+<p><img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg" alt="YouTube" height="20" style="vertical-align:middle"> Autopost uses YouTube API Services to upload videos to the owner's YouTube channel. By using Autopost you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. See also the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and our own <a href="privacy.html">Privacy Policy</a>.</p>
+<h2>How it works</h2>
+<ol>
+<li>The owner signs in once with his Google Account and grants the <code>youtube.upload</code> and <code>youtube.readonly</code> scopes.</li>
+<li>He adds a finished video from his computer to the local publishing queue with a title, description and publish time.</li>
+<li>At the scheduled time Autopost uploads the video with <code>videos.insert</code> and records the link to the uploaded video.</li>
+</ol>
 <p class="muted"><small>See the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</small></p>
 </main></body></html>
