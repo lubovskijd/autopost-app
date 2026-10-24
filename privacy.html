@@ -5,7 +5,8 @@
 <p>Autopost is a personal publishing tool operated by Daniil Lubovskij for his own accounts only.</p>
 <h2>What data the app accesses</h2>
 <ul>
-<li>YouTube: with the owner's consent the app uses the scopes <code>youtube.upload</code> and <code>youtube.readonly</code> to upload videos to the owner's channel and to read the channel name for a health check.</li>
+<li>YouTube: with the owner's consent the app uses the scopes <code>youtube.upload</code> and <code>youtube.readonly</code> to upload videos to the owner's channel and to read the channel name for a health check, and <code>youtube.force-ssl</code> to read comments on the owner's videos and reply to comments that contain a keyword.</li>
+<li>Instagram, Facebook Page and Threads: with the owner's consent the app publishes the owner's posts, reads comments on the owner's own posts and, when a comment contains a keyword, replies to it and sends one private reply to the commenter (Instagram and Facebook) with a link to the owner's Telegram bot.</li>
 <li>TikTok: with the owner's consent the app uses the Content Posting API to upload videos to the owner's TikTok account and reads basic profile info to confirm which account is connected.</li>
 </ul>
 <h2>YouTube API Services</h2>
@@ -13,10 +14,11 @@
 <p>Data accessed from YouTube: the name and ID of the owner's channel (to confirm the connected account) and the ID of each video Autopost uploads (to show the link). No other YouTube data is read, stored or shared. Autopost does not use cookies and does not place any tracking on devices.</p>
 <p>Stored YouTube data (the channel name and the IDs of uploaded videos) is kept only in the local queue file and is deleted on request or when the owner deletes that file. Data that is no longer needed is deleted within 30 days.</p>
 <h2>How data is used and stored</h2>
-<p>Access tokens are stored only in a local configuration file on the owner's computer. They are used solely to publish the owner's own videos and are never sold, shared with or transferred to third parties. No analytics, advertising or tracking are used.</p>
+<p>Access tokens are stored in a local configuration file on the owner's computer and in the owner's private Supabase project (EU, Frankfurt), which runs the scheduled publishing and comment replies. They are used solely for the owner's own accounts and are never sold, shared with or transferred to third parties. No analytics, advertising or tracking are used.</p>
+<p>Comment data: for comments that contain the keyword the app stores the comment ID, the commenter's public username, the comment text and the reply sent, so that each person receives only one reply. Comments without the keyword are stored only as an ID and text to avoid processing them twice. This data is kept for up to 12 months and deleted on request, see <a href="data-deletion.html">Data Deletion Instructions</a>.</p>
 <p>Autopost's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Use of YouTube is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 <h2>Revoking access and deleting data</h2>
-<p>Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">Google Account permissions</a> or in the TikTok app settings under "Security and permissions". Deleting the local configuration file removes all stored tokens.</p>
+<p>Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">Google Account permissions</a> or in the TikTok app settings under "Security and permissions". Deleting the local configuration file removes all stored tokens. Instructions for deleting comment and questionnaire data: <a href="data-deletion.html">Data Deletion Instructions</a>.</p>
 <h2>Contact</h2>
 <p>Questions about this policy can be sent to the support email shown on the app's consent screen.</p>
 </main></body></html>
